@@ -1,0 +1,2553 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nunito:wght@300&family=Poppins:wght@400;700&family=Raleway:wght@300;900&family=Roboto&display=swap');
+
+
+:root{
+    --orange: #ffaf37;
+    --text-color-1: #ffffff; 
+    --text-color-2: #272727; 
+    --text-color-3: #ffffff;
+    --text-color-4: #ffffff;
+    --bg-color-1: #b52022;
+    --bg-color-2: #000000;
+    --bg-color-3: #f8f8f8;
+    --bg-color-4: rgb(72, 72, 72);
+    --bg-color-5: #b52022;
+    --bg-color-6: #e3e3e3;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
+    --hero-image: url("residence/residential-hero.png");
+    --telephone-image: url("residence/telephone.png");
+    --logo-image: url("residence/logo-white.png");
+    --faq-plus: url("residence/plus.png");
+    --faq-minus: url("residence/minus.png");
+    --map-image: url("residence/Lmap.png");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-family: "Roboto";
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--orange);
+    border-radius: 5rem;
+}
+
+body{
+    background-color: var(--text-color-1);
+}
+
+section{
+    padding: 6rem 15rem 6rem 15rem;
+}
+
+body.active{
+    --text-color-1: #000000;
+    --text-color-2: #ffffff;
+    --text-color-3: #ffffff;
+    --text-color-4: #b52022;
+    --bg-color-2: #f8f8f8;
+    --bg-color-3: #272727;
+    --bg-color-6: #b5b5b5;
+    --bg-color-5: #ffffff;
+    --box-shadow: 0 .5rem 1.5rem rgba(104, 104, 104, 0.2);
+    --hero-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)), url("residence/Air compressor.jpg");
+    --logo-image: url("residence/logo-black.png");
+    --faq-minus: url("residence/plus.png");
+    --faq-plus: url("residence/minus.png");
+    --map-image: url("residence/Dmap.png");
+}
+
+.image.black{
+    background-color: var(--bg-color-4);
+    width: 4rem;
+    height: 4rem;
+    line-height: 3.5rem;
+    border-radius: 50%;
+    padding: .75rem .75rem;
+}
+
+.image.white{
+    background-color: #e95052;
+    width: 4rem;
+    height: 4rem;
+    line-height: 3.5rem;
+    border-radius: 50%;
+    padding: .75rem .75rem;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 7%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero{
+    background-image: var(--hero-image);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position-x: right; 
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero h1{
+    margin-top: 5rem;
+    color: var(--bg-color-2);
+    font-size: 3rem;
+    padding-right: 60rem;
+}
+
+.hero h1 span{
+    border-bottom: .3rem solid var(--bg-color-1);
+}
+
+.hero p{
+    margin-top: 2rem;
+    color: var(--bg-color-2);
+    font-size: 2rem;
+    padding-right: 60rem;
+}
+
+.hero p span{
+    text-transform: uppercase;
+    color: var(--bg-color-1);
+    font-weight: bold;
+}
+
+.call{
+    width: 23rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.call a{
+    color: #ffffff;
+}
+
+.call img{
+    width: 25px;
+    height: 25px;
+}
+
+.call .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.learn{
+    max-width: 17.5rem;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.learn a{
+    color: var(--bg-color-5);
+}
+
+.learn .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-5);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.header .logo {
+    background-image: var(--logo-image);
+    width: 172px;
+    height: 74px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .icons #menu-btn{
+    height: 5.5rem;
+    width: 5.5rem;
+    line-height: 5.5rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin-left: .5rem;
+    background: var(--bg-color-1);
+    color: var(--text-color-1);
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons #menu-btn:hover{
+    color: var(--text-color-2);
+    background: var(--orange);
+}
+
+.theme-btn{
+    width: 17rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-3);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.theme-btn p::before{
+    content: "LIGHT MODE";
+    color: var(--text-color-2);
+    font-size: 1.5rem;
+}
+
+.theme-btn img{
+    width: 20px;
+    height: 20px;
+}
+
+.theme-btn img:hover{
+    transform: scale(1.2);
+}
+
+.header .navbar{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: var(--bg-color-1);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 25rem;
+    transform: scale(0);
+    transform-origin: top right;
+}
+
+.header .navbar.active{
+    transform: scale(1);
+}
+
+.header .navbar a{
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-color-3);
+    border-radius: .5rem;
+}
+
+.header .navbar a:hover{
+    color: var(--orange);
+    background: var(--bg-color-2);
+    padding-left: 2rem;
+}
+
+.header .emergency{
+    max-width: 37rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .8rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color-2);
+    background: var(--text-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.header .emergency a::before{
+    content: "CALL US 24/7 not only in Emergency (403) 226-6066";
+    color: var(--bg-color-2);
+}
+
+.header .emergency img{
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+.header .emergency .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.services .services-portion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 22rem;
+}
+
+.services h1{
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--bg-color-2);
+}
+
+.services .box-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.services .box-container .box{
+    border-radius: 2rem;
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .box-container .box:hover{
+    background: var(--bg-color-3);
+    box-shadow: var(--box-shadow);
+}
+
+.services .box-container .box img{
+    background: var(--bg-color-6);
+    box-shadow: var(--box-shadow);
+    line-height: 10rem;
+    border-radius: 50%;    
+    width: 7.5rem;
+    height: 7.5rem;
+    padding: .75rem .75rem;
+}
+
+.services .box-container .box h3{
+    color: var(--bg-color-2);
+    font-size: 2.3rem;
+    padding: .7rem 0;
+    text-align: center;
+}
+
+.services .box-container .box p{
+    margin-top: 1.5rem;
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.corporate{
+    padding: 3rem 0 0 12rem;
+    background-image: url("residence/bg-red.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.corporate .vision{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+.corporate .vision img{
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;    
+}
+
+.corporate .vision h3{
+    padding-right: 40rem;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.corporate .vision h4{
+    margin-top: 3rem;
+    font-size: 2.1rem;
+    color: #ffffff;
+}
+
+.corporate .vision p{
+    padding-right: 20rem;
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+.heating .heat-cool{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.heating .heat-cool h3{
+    font-size: 3rem;
+    color: var(--bg-color-2);
+    text-align: center;
+}
+
+.heating .heat-cool .heat-one p{
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    text-align: center;
+}
+
+.heating .heat-cool .system{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.heating .heat-cool .system p{
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+}
+
+.heating .heat-cool h4{
+    margin-top: 2rem;
+    font-size: 2.4rem;
+    color: var(--bg-color-2);
+}
+
+.heating .heat-cool .system .system-image{
+    background: var(--bg-color-6);
+    border-radius: 50%;
+    border: .1rem solid var(--bg-color-1);
+    width: 5rem;
+    height: 5rem;
+    padding: .75rem .75rem;
+}
+
+.heating .heat-cool .system img{
+    width: 3rem;
+    height: 3rem;
+    
+}
+
+.satisfaction .box-container{
+    border: .1rem solid var(--bg-color-1);
+    border-radius: 10rem 10rem 4rem 4rem;
+    background: var(--bg-color-3);
+}
+
+.satisfaction .box-container .satisfaction-portion{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 40% 60%;
+    gap: 2rem;
+    background: var(--bg-color-1);
+    border-radius: 10rem;
+    padding: 1.5rem 3rem;
+    height: 20rem;
+}
+
+.satisfaction .box-container .satisfaction-portion .box img{
+    width: 17rem;
+    height: 17rem;
+}
+
+.satisfaction .box-container .satisfaction-portion .box .satisfaction-img{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.satisfaction .box-container .satisfaction-portion .box .satisfaction-img img{
+    width: 40%;
+    height: 40%;
+}
+
+.satisfaction .box-container .satisfaction-portion .box h3{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: var(--text-color-1);
+}
+
+.satisfaction .box-container .satisfaction-portion .box p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--text-color-1);
+}
+
+.satisfaction-para-one p{
+    padding: 2rem 3rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--bg-color-2);
+}
+
+.satisfaction-para-two p:nth-child(1){
+    margin-left: 3rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    font-weight: bold;
+    color: var(--bg-color-2);
+}
+
+.satisfaction-para-two p span{
+    color: var(--bg-color-1);
+}
+
+.satisfaction-para-two p:nth-child(2){
+    margin-left: 3rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--bg-color-2);
+}
+
+.satisfaction-down{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.satisfaction-down .emergency{
+    max-width: 20rem;
+    height: 5rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--text-color-2);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.satisfaction-down .emergency a{
+    color: var(--text-color-1);
+}
+
+.satisfaction-down .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-2);
+    color: var(--text-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.revolutionize .comfort .top h3{
+    font-size: 3rem;
+    color: var(--bg-color-2);
+    text-align: center;
+}
+
+.revolutionize .comfort .top p{
+    margin-top: 1.7rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    text-align: center;
+    padding: 0 30rem;
+}
+
+.revolutionize .comfort .bottom img{
+    width: 25rem;
+    height: 15rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.revolutionize .comfort .bottom{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+    gap: 2rem;
+    padding: 0 5rem;
+}
+
+.revolutionize .comfort .bottom div{
+    width: 25rem;
+    height: 30rem;
+    background: var(--bg-color-3);
+    box-shadow: var(--box-shadow);
+    border-radius: 2rem;
+}
+
+.revolutionize .comfort .bottom div:nth-child(4),
+.revolutionize .comfort .bottom div:nth-child(5){
+    margin-left: 15rem;
+}
+
+.revolutionize .comfort .bottom h4{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: var(--bg-color-2);
+    
+}
+
+.revolutionize .comfort .bottom p{
+    margin-top: 1.7rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    margin-left: 1rem;
+}
+
+.reviews .reviews-portion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22rem;
+}
+
+.reviews .reviews-portion .google{ 
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.reviews .reviews-portion .google .stars{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+}
+
+.reviews .reviews-portion .google .stars i{ 
+    color: var(--orange);
+    font-size: 1.75rem;
+}
+
+.reviews-portion h1{
+    font-size: 4.5rem;
+    color: var(--bg-color-2);
+}
+
+.reviews-portion p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+}
+
+.reviews .box-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.reviews .box-container .box{
+    background: var(--bg-color-3);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    padding: 2rem;
+}
+
+.reviews .box-container .box i{
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--orange);
+    background: var(--text-color-1);
+    border-radius: 50%;
+    margin-bottom: .5rem;
+}
+
+.reviews .box-container .box h3{
+    color: var(--bg-color-2);
+    font-size: 2rem;
+}
+
+.reviews .box-container .box h4{
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.reviews .box-container .box p{
+    margin-top: 2rem;
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.reviews-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.reviews-header .user{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews-header img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.reviews .emergency{
+    max-width: 20rem;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.reviews .emergency a{
+    color: var(--text-color-3);
+}
+
+.reviews .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-3);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.solutions h3{
+    font-size: 3rem;
+    color: var(--bg-color-2);
+}
+
+.solutions h3 span{
+    border-bottom: .2rem solid var(--bg-color-1);
+}
+
+.solutions .bottom{
+    margin-top: 3.5rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.solutions .bottom .left .left-one{
+    display: flex;
+    padding: 2rem 0 0 0;
+    gap: 2rem;
+    align-items: center;
+}
+
+.solutions .bottom .left .left-one img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: var(--bg-color-6);
+    padding: .75rem .75rem;
+}
+
+.solutions .bottom .left .left-one h4{
+    font-size: 1.5rem;
+    color: var(--bg-color-2);
+}
+
+.solutions .bottom .left .left-one p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+}
+
+.solutions .bottom .right img{
+    width: 36rem;
+    height: 40rem;
+    border-radius: 2rem;
+}
+
+.appointment{
+    background-image: url("residence/bg-red.png");
+    background-size: 100% 95%;
+    background-repeat: no-repeat;
+}
+
+.appointment .Schedule .contact{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contact .fa-regular,
+.contact .fa-solid{
+    font-size: 2.5rem;
+    background: rgb(255, 165, 165);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    padding-left: 0;
+}
+
+.contact .fa-solid.fa-arrow-right{
+    padding-left: 0;
+}
+
+.appointment .Schedule h3{
+    font-size: 3rem;
+    color: var(--text-color-3);
+    text-align: center;
+    padding: 0 25rem;
+}
+
+.appointment .Schedule h3 span{
+    border-bottom: .2rem solid var(--bg-color-3);
+}
+
+.appointment .Schedule p{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    text-align: center;
+    color: var(--text-color-3);
+}
+
+.appointment .Schedule .head{
+    padding: 0 9rem;
+}
+
+.appointment .contact .btn{
+    max-width: 25rem;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--bg-color-1);
+    background: var(--bg-color-3);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.appointment .contact .btn a{
+    color: var(--bg-color-5);
+}
+
+.appointment .contact .btn .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: rgb(255, 165, 165);
+    color: var(--bg-color-5);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.appointment .emergency{
+    max-width: 35rem;
+    height: 5rem;
+    margin-top: 4rem;
+    margin-left: 27rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-2);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.appointment .emergency a{
+    color: var(--text-color-1);
+}
+
+.appointment .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: rgb(84, 84, 84);
+    color: var(--bg-color-3);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.locations .main-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.locations .main-div .left h3{
+    font-size: 4rem;
+    color: var(--bg-color-2);
+}
+
+.locations .main-div .left .maps{
+    margin-top: 3rem;
+    min-width: 30rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 3fr));
+    gap: 3rem;
+}
+
+.locations .main-div .left .maps div{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    align-items: center;
+    width: 17rem;
+    height: 5rem;
+    border-radius: 1rem;
+    background: var(--bg-color-3);
+    box-shadow: var(--box-shadow);
+}
+
+.locations .main-div .left .maps div i{
+    color: var(--bg-color-2);
+    margin-left: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.locations .main-div .left .maps div h4{
+    font-size: 1.7rem;
+    color: var(--bg-color-2);
+}
+
+.locations .main-div .right{
+    background-image: var(--map-image);
+    background-size: cover;
+    height: 35rem;
+    width: 35rem;
+    border: 1rem solid var(--text-color-4);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+
+.locations .emergency{
+    max-width: 22rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.locations .emergency a{
+    color: #ffffff;
+}
+
+.locations .emergency .image{
+    background: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: .75rem .75rem;
+}
+
+.locations .emergency img{   
+    width: 25px;
+    height: 25px;
+}
+
+.approach h3{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--bg-color-2);
+}
+
+.approach .para{
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    padding: 0 17rem;
+}
+
+.approach .image{
+    position: absolute;
+    justify-self: center;
+}
+
+.approach .image img{
+    width: 30rem;
+    height: 30rem;
+    background: var(--text-color-1);
+    border: .75rem solid #eeeeee;
+    border-radius: 50%;
+    padding: 3rem 3rem;
+}
+.approach .main-div{
+    width: 100%;
+    margin-top: 10rem; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 22rem;
+}
+
+.main-div .right-div .right img,
+.main-div .left-div .left img,
+.approach .bottom img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    padding: .75rem .75rem;
+    background: var(--bg-color-1);
+}
+
+.approach .main-div .right-div,
+.approach .main-div .left-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
+}
+
+.main-div .right-div .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-div .left-div .left{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.main-div .left-div .left h4{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--bg-color-2);
+    text-align: right;
+}
+
+.main-div .left-div .left p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    font-weight: 400;
+    text-align: right;
+}
+
+.main-div .right-div .right h4{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--bg-color-2);
+    text-align: left;
+}
+
+.main-div .right-div .right p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    font-weight: 400;
+    text-align: left;
+}
+
+.approach .bottom{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.approach .bottom h4{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--bg-color-2);
+    text-align: center;
+}
+
+.approach .bottom p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    font-weight: 400;
+    text-align: center;
+    padding: 0 30rem;
+}
+
+.faq{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.faq h2{
+    color: var(--bg-color-2);
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.faq h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 1.2rem;
+    width: 6.7rem;
+    height: .2rem;
+}
+
+.accordion{
+    width: 100%;
+    padding: 0 .5rem;
+    border-bottom: .1rem solid var(--bg-color-4);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    align-items: center;
+}
+
+.accordion h3{
+    font-size: 1.7rem;
+    color: var(--bg-color-2);
+}
+
+.accordion h3:hover{
+    color: var(--bg-color-1);
+}
+
+.accordion .number{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.accordion .icon{
+    width: 3rem;
+    height: 3rem;
+    background: var(--faq-plus);
+    border-radius: 50%;
+    float: left;
+    transition: all .5s ease-in;
+}
+
+.accordion h5{
+    font-size: 2rem;
+    margin: 0;
+    padding: .3rem 0 0 0;
+    font-weight: normal;
+    color: var(--bg-color-2);
+}
+
+.accordion p{
+    color: var(--bg-color-2);
+}
+
+.active .icon {
+    background: var(--faq-minus);
+}
+
+.panel{
+    padding: 0 1.5rem;
+    border-left: .1rem solid var(--bg-color-2);
+    margin-left: 2.5rem;
+    font-size: 1.4rem;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s ease-in;
+}
+
+.panel p{
+    color: var(--bg-color-2);
+}
+
+.residential h2{
+    font-size: 4rem;
+    color: var(--bg-color-2);
+    text-align: center;
+}
+
+.residential .control{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.residential .control .para-one,
+.residential .control .para-two,
+.residential .control .para-three{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+
+.sub-para h3{
+    font-size: 4rem;
+    color: var(--bg-color-2);
+    margin-top: 2.5rem;
+}
+
+.sub-para p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    margin-top: 2rem;
+}
+
+.image-one{
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+}
+
+.para-one .image-one img:nth-child(1){
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    margin-top: 1rem;
+    background-color: var(--bg-color-1);
+    border-radius: 50%;
+    border: .3rem solid #ffffff;
+}
+
+.para-two .image-one img:nth-child(1){
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    margin-left: 33rem;
+    margin-top: 1rem;
+    background-color: var(--bg-color-1);
+    border-radius: 50%;
+    border: .3rem solid #ffffff;
+}
+
+.para-three .image-one img:nth-child(1){
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    margin-top: 1rem;
+    background-color: var(--bg-color-1);
+    border-radius: 50%;
+    border: .3rem solid #ffffff;
+}
+
+.image-one img:nth-child(2){ 
+    width: 40rem;
+    height: 40rem;  
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.residential .emergency{
+    max-width: 17.5rem;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-3);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.residential .emergency a{
+    color: var(--text-color-3);
+}
+
+.residential .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-3);
+    color: var(--bg-color-5);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.repair{
+    padding: 0;
+}
+
+.repair .main-div{
+    margin-top: 5rem;
+    background-image: url("residence/resi-emergency.png");
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.repair h1{
+    margin-top: 5rem;
+    padding: 0 35rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.repair h1 span{
+    border-bottom: .2rem solid var(--bg-color-1);
+}
+
+.repair p{
+    padding: 0 20rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    text-align: center;
+    color: #ffffff;
+}
+
+.repair .emergency{
+    max-width: 70rem;
+    margin-top: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: .7rem 1rem;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: var(--text-color-1);
+    background: var(--bg-color-3);
+    border: .1rem solid var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.repair .emergency a{
+    color: var(--bg-color-2);
+}
+
+.repair .emergency img{
+    width: 25px;
+    height: 25px;
+}
+
+.repair .emergency .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--bg-color-1);
+}
+
+.Resi-blog .comfort .top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Resi-blog .comfort .top h3{
+    margin-left: 15rem;
+    font-size: 3rem;
+    color: var(--bg-color-2);
+}
+
+.Resi-blog .comfort .top .arrows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: .75rem;
+    margin-right: 15rem;
+}
+
+.Resi-blog .comfort .top .arrows .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-3);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+
+}
+
+.Resi-blog .comfort .top .arrows .fa-solid:hover{
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+}
+
+.Resi-blog .comfort .top p{
+    margin-top: 1.7rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    text-align: center;
+}
+
+.Resi-blog .comfort .bottom img{
+    width: 30rem;
+    height: 20rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.Resi-blog .comfort .bottom{
+    margin-top: 3rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.Resi-blog .comfort .bottom .main{
+    width: 30rem;
+    height: 38rem;
+    background: var(--bg-color-3);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.Resi-blog .comfort .bottom h4{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: var(--bg-color-2);
+    
+}
+
+.Resi-blog .comfort .bottom p{
+    margin-top: 1.7rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    margin-left: 1rem;
+}
+
+.Resi-blog .emergency{
+    max-width: 17.5rem;
+    height: 5rem;
+    display: flex;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.Resi-blog .emergency a{
+    color: var(--bg-color-1);
+}
+
+.Resi-blog .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-3);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.mechanical{
+    background-image: url("residence/bg-red.png");
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+    padding-left: 0;
+}
+
+.mechanical .vision{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.mechanical .vision .left img{
+    width: 40rem;
+    height: 40rem;
+    padding-right: 10rem;
+    padding-bottom: 10.25rem;
+    rotate: 5deg;
+}
+
+.mechanical .vision h3{
+    font-size: 2.5rem;
+    color: var(--text-color-3);
+    text-align: center;
+}
+
+.mechanical .emergency{
+    max-width: 25rem;
+    margin-top: 5rem;
+    margin-left: 12rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-2);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.mechanical .emergency a{
+    color: var(--text-color-1);
+}
+
+.mechanical .emergency .image{
+    width: 4rem;
+    height: 4rem;
+    padding: .75rem .75rem;
+    border-radius: 50%;
+    background: var(--bg-color-4);
+}
+
+.mechanical .emergency img{
+    width: 25px;
+    height: 25px;
+}
+
+.mechanical .emergency .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+#newsletter{
+    padding: 0 20rem 0 20rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 20% 30%; 
+    background-color: var(--bg-color-3);
+    width: 100%;
+    min-height: 10rem;
+}
+
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bg-color-2);
+}
+
+#newsletter .form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 5rem;
+}
+
+#newsletter .emergency{
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#newsletter .emergency .fa-solid{
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;    
+    background: var(--bg-color-1);
+    color: var(--text-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+footer{
+    padding: 12rem 12rem 0 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .col.install p:hover{
+    color: var(--bg-color-1);
+}
+
+footer .col span{
+    border-bottom: .2rem solid var(--bg-color-1);
+}
+
+footer .logo{
+    background-image: var(--logo-image);
+    width: 172px;
+    height: 74px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: var(--bg-color-2);
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    color: var(--bg-color-2);
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--bg-color-2);;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+footer .follow i{
+    color: var(--bg-color-2);
+    padding-right: 4px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+footer .follow i{
+    color: var(--bg-color-2);
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: var(--bg-color-1);
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+footer .copyright span{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 0 0 0 0;
+    } 
+}
+@media screen and (max-width: 1024px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+}
+
+@media screen and (max-width: 768px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 3rem 2rem 3rem 2rem;       
+    }
+    .hero,
+    .reviews,
+    .services,
+    .corporate,
+    .heating,
+    .satisfaction,
+    .revolutionize,
+    .solutions,
+    .solutions .bottom,
+    .appointment,
+    .appointment .Schedule,
+    .locations,
+    .locations .main-div,
+    .locations .main-div .left,
+    .residential,
+    .residential .control .para-one,
+    .residential .control .para-three,
+    .residential .control .sub-para,
+    .repair,
+    .Resi-blog,
+    .Resi-blog .comfort .top,
+    .Resi-blog .comfort .bottom,
+    .mechanical,
+    .hero .main-div,
+    .news{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero{
+        background-image: url("residence/hero-mobile.png");
+        align-items: center;
+        height: 97vh;
+        width: 100vw;
+        position: relative;
+        padding: 0 80px;
+    } 
+    .hero h1{
+        margin-top: 0;
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+        padding-right: 0;
+    }
+    .hero p{
+        text-align: center;
+        padding-right: 0;
+    }
+    .header .emergency a::before{
+        content: " ";
+    }   
+    .header .emergency{
+        max-width: none;
+        background: none;
+    }    
+    .theme-btn p::before{
+        content: " ";
+    }
+    .theme-btn{
+        max-width: none;
+        background: none;
+    }
+    .moon{
+        display: none;
+    }
+    .header .logo{
+        margin-top: 5rem;
+        background-size: 84%;
+    }
+    .reviews h1{
+        font-size: 3rem;
+    }
+    .reviews .reviews-portion{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }    
+    .reviews .reviews-portion .google{ 
+        justify-content: center;
+    }  
+    .services h1{
+        font-size: 3rem;
+    }
+    .services .box-container .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .services .box-container .box .installation h3,
+    .services .box-container .box .installation p{
+        text-align: left;
+    }
+    .corporate{
+        padding: 3rem 2rem 3rem 2rem;
+    }
+    .corporate .vision{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .corporate .vision img{
+        width: 30rem;
+        height: 30rem;
+    }
+    .corporate .vision .div-vision{
+        margin-top: 10rem;
+    }
+    .corporate .vision h3,
+    .corporate .vision h4,
+    .corporate .vision p{
+        text-align: center;
+        padding-right: 0;
+    }
+    .heating .heat-cool .system{
+        flex-direction: column;
+    }
+    .satisfaction .box-container .satisfaction-portion{
+        display: flex;
+        flex-direction: column;
+        width: 25rem;
+        height: 75rem;
+    }    
+    .satisfaction .box-container .satisfaction-portion .box .satisfaction-img{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin-left: 6rem;
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+    .satisfaction .box-container .satisfaction-portion .box .satisfaction-img img{
+        width: 75%;
+        height: 75%;
+    }
+    .revolutionize .comfort .bottom{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }   
+    .revolutionize .comfort .top p{
+        padding: 0 5rem;
+    }
+    .revolutionize .comfort .bottom img{
+        width: 36rem;
+        height: 20rem;
+        border-radius: 2rem 2rem 0 0;
+    }    
+    .revolutionize .comfort .bottom{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }    
+    .revolutionize .comfort .bottom div{
+        width: 36rem;
+        height: 33rem;
+        background: var(--bg-color-3);
+        box-shadow: var(--box-shadow);
+        border-radius: 2rem;
+    }
+    .revolutionize .comfort .bottom div:nth-child(4),
+    .revolutionize .comfort .bottom div:nth-child(5){
+        margin-left: 0;
+    }
+    .solutions h3{
+        text-align: center;
+        padding: 0 9rem;
+    }
+    .appointment{
+        width: 100%;
+        height: 100vh;
+    }
+    .appointment .Schedule h3{
+        margin-top: 5rem;
+        padding: 0 2rem;
+    }
+    .appointment .Schedule p{
+        text-align: center;
+    }
+    .appointment .Schedule .contact{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .appointment .emergency{
+        margin-left: 0;
+    }
+    .locations .emergency{
+        max-width: 25rem;
+    }
+    .locations .right{
+        margin-top: 3rem;
+    }    
+    .approach .para{
+        margin-top: 1.5rem;
+        font-size: 1.3rem;
+        text-align: center;
+        line-height: 1.5;
+        color: var(--bg-color-2);
+        padding: 0 9rem;
+    }
+    .approach .image{
+        position: relative;
+    }
+    .approach .main-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .approach .main-div{
+        margin-top: 5rem;
+        gap: 2rem;
+    }
+    .approach .image img{
+        border: none;
+        padding: 0;
+    }   
+    .main-div .left-div .left{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .main-div .left-div .left h4{
+        text-align: left;
+    }   
+    .main-div .left-div .left p{
+        text-align: left;
+    }
+    .approach .main-div .right-div{
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-left: 1rem;
+    }
+    .approach .main-div .left-div{
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+    }    
+    .approach .bottom{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1rem;
+    }
+
+    .approach .bottom h4{
+        text-align: left;
+    }
+
+    .approach .bottom p{
+        text-align: left;
+        padding: 0;
+    }
+    .residential .control .para-two{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sub-para h3{
+        padding: 0 10rem;
+        text-align: center;
+        font-size: 3rem;
+    }
+    .para-two .image-one img:nth-child(1){
+        margin-left: 0;
+    }
+    .repair{
+        height: 100vh;
+    }
+    .repair h1{
+        padding: 0 10rem;
+    }
+    .repair p{
+        padding: 0 5rem;
+    }
+    .repair .emergency{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 50rem;
+        width: 50rem;
+    }
+    .Resi-blog .comfort .top h3{
+        margin-left: 0;
+    }
+    .Resi-blog .comfort .top .arrows{
+        margin-right: 0;
+    }
+    .Resi-blog .comfort .bottom img{
+        width: 35rem;
+        height: 20rem;
+        border-radius: 2rem 2rem 0 0;
+    }
+    .Resi-blog .comfort .bottom .main{
+        width: 35rem;
+        height: 38rem;
+        background: var(--bg-color-3);
+        border-radius: 2rem;
+        box-shadow: var(--box-shadow);
+    }
+    .mechanical{
+        background-size: auto;
+        padding: 7rem 0 0rem 0;
+    }
+    .mechanical .vision h3{
+        margin: 5rem;
+        text-align: center;
+    }
+    .mechanical .vision p{
+        text-align: center;
+    }
+    .mechanical .vision{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .vision .div-vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .emergency{
+        margin-left: 0;
+    }
+    .mechanical .vision .left img{
+        width: 100%;
+        rotate: 0deg;
+        padding-right: 0rem;
+        padding-bottom: 0;
+    }
+    #newsletter {
+        margin-top: 5rem;
+        padding: 2rem 3rem 0 3rem;
+        background-position: 30% 40%; 
+        min-height: 10rem;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 3rem 2rem 3rem 2rem;        
+    }
+    .hero,
+    .reviews,
+    .services,
+    .corporate,
+    .heating,
+    .satisfaction,
+    .revolutionize,
+    .solutions,
+    .solutions .bottom,
+    .appointment,
+    .appointment .Schedule,
+    .locations,
+    .locations .main-div,
+    .locations .main-div .left,
+    .residential,
+    .residential .control .para-one,
+    .residential .control .para-three,
+    .residential .control .sub-para,
+    .repair,
+    .Resi-blog,
+    .Resi-blog .comfort .top,
+    .Resi-blog .comfort .bottom,
+    .mechanical,
+    .hero .main-div,
+    .news{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero{
+        background-image: url("residence/hero-mobile.png");
+        align-items: center;
+        height: 97vh;
+        width: 100vw;
+        position: relative;
+        padding: 0 80px;
+    } 
+    .hero h1{
+        margin-top: 0;
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+        padding-right: 0;
+    }
+    .hero p{
+        text-align: center;
+        padding-right: 0;
+    }
+    .header .emergency a::before{
+        content: " ";
+    }   
+    .header .emergency{
+        max-width: none;
+        background: none;
+    }    
+    .theme-btn p::before{
+        content: " ";
+    }
+    .theme-btn{
+        max-width: none;
+        background: none;
+    }
+    .moon{
+        display: none;
+    }
+    .header .logo{
+        margin-top: 5rem;
+        background-size: 84%;
+    }
+    .reviews h1{
+        font-size: 3rem;
+    }
+    .reviews .reviews-portion{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }    
+    .reviews .reviews-portion .google{ 
+        justify-content: center;
+    }  
+    .services h1{
+        font-size: 3rem;
+    }
+    .services .box-container .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .services .box-container .box .installation h3,
+    .services .box-container .box .installation p{
+        text-align: left;
+    }
+    .corporate{
+        padding: 3rem 2rem 3rem 2rem;
+    }
+    .corporate .vision{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .corporate .vision img{
+        width: 30rem;
+        height: 30rem;
+    }
+    .corporate .vision .div-vision{
+        margin-top: 10rem;
+    }
+    .corporate .vision h3,
+    .corporate .vision h4,
+    .corporate .vision p{
+        text-align: center;
+        padding-right: 0;
+    }
+    .heating .heat-cool .system{
+        flex-direction: column;
+    }
+    .satisfaction .box-container .satisfaction-portion{
+        display: flex;
+        flex-direction: column;
+        width: 25rem;
+        height: 75rem;
+    }    
+    .satisfaction .box-container .satisfaction-portion .box .satisfaction-img{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin-left: 6rem;
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+    .satisfaction .box-container .satisfaction-portion .box .satisfaction-img img{
+        width: 75%;
+        height: 75%;
+    }
+    .revolutionize .comfort .bottom{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }   
+    .revolutionize .comfort .top p{
+        padding: 0 5rem;
+    }
+    .revolutionize .comfort .bottom img{
+        width: 36rem;
+        height: 20rem;
+        border-radius: 2rem 2rem 0 0;
+    }    
+    .revolutionize .comfort .bottom{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }    
+    .revolutionize .comfort .bottom div{
+        width: 36rem;
+        height: 33rem;
+        background: var(--bg-color-3);
+        box-shadow: var(--box-shadow);
+        border-radius: 2rem;
+    }
+    .revolutionize .comfort .bottom div:nth-child(4),
+    .revolutionize .comfort .bottom div:nth-child(5){
+        margin-left: 0;
+    }
+    .solutions h3{
+        text-align: center;
+        padding: 0 9rem;
+    }
+    .appointment{
+        width: 100%;
+        height: 100vh;
+    }
+    .appointment .Schedule h3{
+        margin-top: 5rem;
+        padding: 0 2rem;
+    }
+    .appointment .Schedule p{
+        text-align: center;
+    }
+    .appointment .Schedule .contact{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .appointment .emergency{
+        margin-left: 0;
+    }
+    .locations .emergency{
+        max-width: 25rem;
+    }
+    .locations .right{
+        margin-top: 3rem;
+    }    
+    .approach .para{
+        margin-top: 1.5rem;
+        font-size: 1.3rem;
+        text-align: center;
+        line-height: 1.5;
+        color: var(--bg-color-2);
+        padding: 0 9rem;
+    }
+    .approach .image{
+        position: relative;
+    }
+    .approach .main-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .approach .main-div{
+        margin-top: 5rem;
+        gap: 2rem;
+    }
+    .approach .image img{
+        border: none;
+        padding: 0;
+    }   
+    .main-div .left-div .left{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .main-div .left-div .left h4{
+        text-align: left;
+    }   
+    .main-div .left-div .left p{
+        text-align: left;
+    }
+    .approach .main-div .right-div{
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-left: 1rem;
+    }
+    .approach .main-div .left-div{
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+    }    
+    .approach .bottom{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1rem;
+    }
+
+    .approach .bottom h4{
+        text-align: left;
+    }
+
+    .approach .bottom p{
+        text-align: left;
+        padding: 0;
+    }
+    .residential .control .para-two{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sub-para h3{
+        padding: 0 10rem;
+        text-align: center;
+        font-size: 3rem;
+    }
+    .para-two .image-one img:nth-child(1){
+        margin-left: 0;
+    }
+    .repair{
+        height: 100vh;
+    }
+    .repair h1{
+        padding: 0 10rem;
+    }
+    .repair p{
+        padding: 0 5rem;
+    }
+    .repair .emergency{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 50rem;
+        width: 50rem;
+    }
+    .Resi-blog .comfort .top h3{
+        margin-left: 0;
+    }
+    .Resi-blog .comfort .top .arrows{
+        margin-right: 0;
+    }
+    .Resi-blog .comfort .bottom img{
+        width: 35rem;
+        height: 20rem;
+        border-radius: 2rem 2rem 0 0;
+    }
+    .Resi-blog .comfort .bottom .main{
+        width: 35rem;
+        height: 38rem;
+        background: var(--bg-color-3);
+        border-radius: 2rem;
+        box-shadow: var(--box-shadow);
+    }
+    .mechanical{
+        background-size: auto;
+        padding: 7rem 0 0rem 0;
+    }
+    .mechanical .vision h3{
+        margin: 5rem;
+        text-align: center;
+    }
+    .mechanical .vision p{
+        text-align: center;
+    }
+    .mechanical .vision{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .vision .div-vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .emergency{
+        margin-left: 0;
+    }
+    .mechanical .vision .left img{
+        width: 100%;
+        rotate: 0deg;
+        padding-right: 0rem;
+        padding-bottom: 0;
+    }
+    #newsletter {
+        margin-top: 5rem;
+        padding: 2rem 3rem 0 3rem;
+        background-position: 30% 40%; 
+        min-height: 10rem;
+    }
+}

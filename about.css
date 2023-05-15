@@ -1,0 +1,1602 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nunito:wght@300&family=Poppins:wght@400;700&family=Raleway:wght@300;900&family=Roboto&display=swap');
+
+
+:root{
+    --orange: #ffaf37;
+    --text-color-1: #ffffff; 
+    --text-color-2: #272727;
+    --text-color-3: #ffffff;
+    --bg-color-1: #b52022;
+    --bg-color-2: #000000;
+    --bg-color-3: #f8f8f8;
+    --bg-color-4: rgb(72, 72, 72);
+    --bg-color-5: #b52022;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
+    --hero-image: url("about/about-us.png");
+    --telephone-image: url("about/telephone.png");
+    --logo-image: url("about/logo-white.png");
+    --faq-plus: url("about/plus.png");
+    --faq-minus: url("about/minus.png");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-family: "Roboto";
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--orange);
+    border-radius: 5rem;
+}
+
+body{
+    background-color: var(--text-color-1);
+}
+
+/*section{
+    padding: 6rem 15rem 6rem 15rem;
+}*/
+
+body.active{
+    --text-color-1: #000000;
+    --text-color-2: #ffffff;
+    --text-color-3: #ffffff;
+    --bg-color-2: #f8f8f8;
+    --bg-color-3: #272727;
+    --bg-color-6: #b5b5b5;
+    --bg-color-5: #ffffff;
+    --box-shadow: 0 .5rem 1.5rem rgba(104, 104, 104, 0.2);
+    --hero-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)), url("about/about-usD.png");
+    --logo-image: url("about/logo-black.png");
+    --faq-minus: url("about/plus.png");
+    --faq-plus: url("about/minus.png");
+}
+
+.image.black{
+    background-color: var(--bg-color-4);
+    width: 4rem;
+    height: 4rem;
+    line-height: 3.5rem;
+    border-radius: 50%;
+    padding: .75rem .75rem;
+}
+
+.image.white{
+    background-color: #e95052;
+    width: 4rem;
+    height: 4rem;
+    line-height: 3.5rem;
+    border-radius: 50%;
+    padding: .75rem .75rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 7%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero{
+    background-image: var(--hero-image);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position-x: right; 
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero h1{
+    margin-top: 7rem;
+    color: var(--bg-color-2);
+    font-size: 3rem;
+    padding-right: 60rem;
+}
+
+.hero h1 span{
+    border-bottom: .3rem solid var(--bg-color-1);
+}
+
+.hero p{
+    margin-top: 2rem;
+    color: var(--bg-color-2);
+    font-size: 2rem;
+    padding-right: 60rem;
+}
+
+.hero p span{
+    text-transform: uppercase;
+    color: var(--bg-color-1);
+    font-weight: bold;
+}
+
+.call{
+    width: 17rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.call a{
+    color: #ffffff;
+}
+
+.call img{
+    width: 25px;
+    height: 25px;
+}
+
+.call .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.learn{
+    max-width: 17.5rem;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.learn a{
+    color: var(--bg-color-5);
+}
+
+.learn .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-5);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.header .logo {
+    background-image: var(--logo-image);
+    width: 172px;
+    height: 74px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .icons #menu-btn{
+    height: 5.5rem;
+    width: 5.5rem;
+    line-height: 5.5rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin-left: .5rem;
+    background: var(--bg-color-1);
+    color: var(--text-color-1);
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons #menu-btn:hover{
+    color: var(--text-color-2);
+    background: var(--orange);
+}
+
+.theme-btn{
+    width: 17rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-3);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.theme-btn p::before{
+    content: "LIGHT MODE";
+    color: var(--text-color-2);
+    font-size: 1.5rem;
+}
+
+.theme-btn img{
+    width: 20px;
+    height: 20px;
+}
+
+.theme-btn img:hover{
+    transform: scale(1.2);
+}
+
+.header .navbar{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: var(--bg-color-1);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 25rem;
+    transform: scale(0);
+    transform-origin: top right;
+}
+
+.header .navbar.active{
+    transform: scale(1);
+}
+
+.header .navbar a{
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-color-3);
+    border-radius: .5rem;
+}
+
+.header .navbar a:hover{
+    color: var(--orange);
+    background: var(--bg-color-2);
+    padding-left: 2rem;
+}
+
+.header .emergency{
+    max-width: 37rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .8rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color-2);
+    background: var(--text-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.header .emergency a::before{
+    content: "CALL US 24/7 not only in Emergency (403) 226-6066";
+    color: var(--bg-color-2);
+}
+
+.header .emergency img{
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+.header .emergency .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.climate{
+    padding: 7rem 20rem 7rem 20rem;
+}
+
+.climate .box-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+}
+
+.climate .box-container .box img{
+    margin-top: 3rem;
+    width: 450px;
+    height: 525px;
+    border-radius: 3rem;
+}
+
+.climate .box-container .box h3{
+    font-size: 2rem;
+    color: var(--bg-color-2);
+}
+
+.climate .box-container .box p{
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+}
+
+.climate .emergency{
+    width: 80rem;
+    margin-left: 40rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 30rem 2rem 2rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem 0 0 20rem;
+    cursor: pointer;
+}
+
+.climate .emergency a{
+    color: #ffffff;
+}
+
+.climate .emergency img{
+    width: 25px;
+    height: 25px;
+}
+
+.climate .emergency .btn span{
+    font-size: 2rem;
+}
+
+.review .review-portion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review{
+    padding: 7rem 20rem 7rem 20rem;
+}
+
+.review h1{
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--bg-color-2);
+}
+
+.review .review-portion .arrows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: .75rem;
+}
+
+.review .review-portion .arrows .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-3);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+
+}
+
+.review .review-portion .arrows .fa-solid:hover{
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+}
+
+.review .box-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .box-container .box{
+    background: var(--bg-color-3);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    padding: 2rem;
+}
+
+.review .box-container .box i{
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--orange);
+    background: var(--text-color-1);
+    border-radius: 50%;
+    margin-bottom: .5rem;
+}
+
+.review .box-container .box h3{
+    color: var(--bg-color-2);
+    font-size: 2.3rem;
+    padding: .7rem 0;
+}
+
+.review .box-container .box h4{
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    font-weight: 420;
+    padding: .7rem 0;
+    border-bottom: .1rem solid #b52022;
+}
+
+.review .box-container .box p{
+    margin-top: 3rem;
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.partners{
+    padding: 7rem 20rem 7rem 20rem;
+}
+
+.partners .partner-logos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners .partner-logos img{
+    width: 120px;
+    height: 105px;
+}
+
+.mission{
+    padding: 6rem 12rem 6rem 0;
+}
+
+.mission .statement{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.mission .statement .first img{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    border: .5rem solid var(--bg-color-1);
+}
+
+.mission .statement .second img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+}
+
+.mission .statement .paragraph h2{
+    font-size: 3rem;
+    color: var(--bg-color-2);
+}
+
+.mission .statement .paragraph h2 span{
+    border-bottom: .15rem solid var(--bg-color-1);
+}
+
+.mission .statement .paragraph p{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 600;
+    text-align: center;
+    color: var(--bg-color-2);
+}
+
+.satisfaction{
+    padding: 6rem 15rem 6rem 15rem;
+}
+
+.satisfaction .box-container .satisfaction-portion{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 40% 60%;
+    gap: 2rem;
+    background: var(--bg-color-1);
+    border-radius: 10rem;
+    padding: 1.5rem 3rem;
+    height: 20rem;
+}
+
+.satisfaction .box-container .satisfaction-portion .box img{
+    width: 17rem;
+    height: 17rem;
+}
+
+.satisfaction .box-container .satisfaction-portion .box .satisfaction-img{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.satisfaction .box-container .satisfaction-portion .box .satisfaction-img img{
+    width: 40%;
+    height: 40%;
+}
+
+.satisfaction .box-container .satisfaction-portion .box h3{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: var(--text-color-3);
+}
+
+.satisfaction .box-container .satisfaction-portion .box p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--text-color-3);
+}
+
+.core{
+    padding: 6rem 15rem 6rem 15rem;
+}
+
+.core h1{
+    font-size: 4rem;
+    color: var(--bg-color-2);
+}
+
+.core p{
+    font-size: 1.3rem;
+    color: var(--bg-color-2);
+}
+
+.core .values{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.core .values .values-one{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.core .values .values-one .div-one,
+.core .values .values-one .div-two,
+.core .values .values-one .div-three,
+.core .values .values-one .div-four,
+.core .values .values-one .div-five{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.core .values .values-one .div-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.core .values .values-one img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    padding: .75rem .75rem;
+    background: var(--bg-color-6);
+}
+
+.core .values .professionalism .div-image img{
+    width: 36rem;
+    height: 23rem;
+    border-radius: 3rem;
+}
+
+.professionalism ul{
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 2;
+    color: var(--bg-color-2);
+    list-style: circle inside url("about/circle.png");
+}
+
+.corporate{
+    background-image: url("about/bg-red.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 6rem 15rem 6rem 15rem;
+}
+
+.corporate .vision{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+.corporate .vision img{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;    
+}
+
+.corporate .vision h3{
+    font-size: 3rem;
+    color: var(--text-color-3);
+}
+
+.corporate .vision ul li{
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-color-3);
+    list-style: circle inside url("about/circle.png");
+}
+
+.commercial{
+    padding: 6rem 15rem 6rem 15rem;
+}
+
+.commercial h1{
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--text-color-2);
+}
+
+.commercial .box-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+}
+
+.commercial .box-container .box{
+    border-radius: 2rem;
+    position: relative;
+    padding: 2rem;
+    transition: .2s ease-in;
+}
+
+.commercial .box-container .box:hover{
+    background: var(--bg-color-3);
+    box-shadow: var(--box-shadow);
+    transform: scale(1.1);
+}
+
+.commercial .box-container .box h3{
+    margin-top: 2rem;
+    color: var(--bg-color-2);
+    font-size: 2rem;
+}
+
+.commercial .box-container .box p{
+    margin-top: 3rem;
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.commercial .box-container .box img{
+    width: 6.5rem;
+    height: 6.5rem;
+    padding: .75rem .75rem;
+    background: var(--bg-color-6);
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
+}
+
+.commercial .box-container .box:hover img{
+    background: var(--bg-color-1);
+}
+
+.commercial .box-container .box .emergency{
+    max-width: 17.5rem;
+    height: 5rem;
+    display: flex;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.commercial .box-container .box .emergency a{
+    color: var(--bg-color-5);
+}
+
+.commercial .box-container .box .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-3);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.mechanical{
+    background-image: url("about/bg-red.png");
+    background-size: 100% 76%;
+    background-repeat: no-repeat;
+    padding-left: 0;
+}
+
+.mechanical .vision{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.mechanical .vision .left img{
+    width: 40rem;
+    height: 40rem;
+    padding-right: 10rem;
+    padding-bottom: 10.25rem;
+    rotate: 5deg;
+}
+
+.mechanical .vision h3{
+    margin-top: 5rem;
+    font-size: 2.5rem;
+    color: var(--text-color-3);
+    text-align: center;
+}
+
+.mechanical .emergency{
+    max-width: 25rem;
+    margin-top: 5rem;
+    margin-left: 12rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-2);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.mechanical .emergency a{
+    color: var(--text-color-1);
+}
+
+.mechanical .emergency .image{
+    width: 4rem;
+    height: 4rem;
+    padding: .75rem .75rem;
+    border-radius: 50%;
+    background: var(--bg-color-4);
+}
+
+.mechanical .emergency img{
+    width: 25px;
+    height: 25px;
+}
+
+.mechanical .emergency .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.faq{
+    width: 70%;
+    padding: 0 15rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.faq h2{
+    color: var(--bg-color-2);
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.faq h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 1.2rem;
+    width: 6.7rem;
+    height: .2rem;
+}
+
+.accordion{
+    width: 100%;
+    padding: 0 .5rem;
+    border-bottom: .1rem solid var(--bg-color-4);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    align-items: center;
+}
+
+.accordion h3{
+    font-size: 1.7rem;
+    color: var(--bg-color-2);
+}
+
+.accordion h3:hover{
+    color: var(--bg-color-1);
+}
+
+.accordion .number{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.accordion .icon{
+    width: 3rem;
+    height: 3rem;
+    background: var(--faq-plus);
+    border-radius: 50%;
+    float: left;
+    transition: all .5s ease-in;
+}
+
+.accordion h5{
+    font-size: 2rem;
+    margin: 0;
+    padding: .3rem 0 0 0;
+    font-weight: normal;
+    color: var(--bg-color-2);
+}
+
+.accordion p{
+    color: var(--bg-color-2);
+}
+
+.active .icon {
+    background: var(--faq-minus);
+}
+
+.panel{
+    padding: 0 1.5rem;
+    border-left: .1rem solid var(--bg-color-2);
+    margin-left: 2.5rem;
+    font-size: 1.4rem;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s ease-in;
+}
+
+.panel p{
+    color: var(--bg-color-2);
+}
+
+#newsletter{
+    padding: 0 20rem 0 20rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 20% 30%; 
+    background-color: var(--bg-color-3);
+    width: 100%;
+    min-height: 10rem;
+}
+
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bg-color-2);
+}
+
+#newsletter .form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 5rem;
+}
+
+#newsletter .emergency{
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#newsletter .emergency .fa-solid{
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;    
+    background: var(--bg-color-1);
+    color: var(--text-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+footer{
+    padding: 12rem 12rem 0 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .col.install p:hover{
+    color: var(--bg-color-1);
+}
+
+footer .col span{
+    border-bottom: .2rem solid var(--bg-color-1);
+}
+
+footer .logo{
+    background-image: var(--logo-image);
+    width: 172px;
+    height: 74px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: var(--bg-color-2);
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    color: var(--bg-color-2);
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--bg-color-2);;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+footer .follow i{
+    color: var(--bg-color-2);
+    padding-right: 4px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+footer .follow i{
+    color: var(--bg-color-2);
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: var(--bg-color-1);
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+footer .copyright span{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 0 0 0 0;
+    } 
+}
+
+@media screen and (max-width: 1024px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+}
+
+@media screen and (max-width: 768px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 1rem 2rem 1rem 2rem;        
+    }
+    .hero,
+    .review,
+    .review .review-portion,
+    .partners,
+    .mission,
+    .satisfaction,
+    .core,
+    .corporate,
+    .faq,
+    .commercial,
+    .mechanical,
+    .climate,
+    .professionalism,
+    .news{        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+    .hero{
+        background-image: url("about/hero-mobile.png");
+        align-items: center;
+        height: 110vh;
+        width: 100vw;
+        position: relative;
+        padding: 0 80px;
+    } 
+    .hero h1{
+        margin-top: 0;
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+        padding-right: 0;
+    }
+    .hero p{
+        text-align: center;
+        padding-right: 0;
+    }
+    .header .emergency a::before{
+        content: " ";
+    }   
+    .header .emergency{
+        max-width: none;
+        background: none;
+    }    
+    .theme-btn p::before{
+        content: " ";
+    }
+    .theme-btn{
+        max-width: none;
+        background: none;
+    }
+    .moon{
+        display: none;
+    }
+    .header .logo{
+        margin-top: 5rem;
+        background-size: 84%;
+    }
+    .review .review-portion{
+        font-size: 2.7rem;
+    }
+    .review .box-container .box{
+        max-width: 45rem;
+    }        
+    .partners .partner-logos img{
+        width: 81px;
+        height: 71px;
+    }
+    .climate .box-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .climate .box-container .box{
+        width: 100%;
+        position: relative;
+    }    
+    .climate .box-container .box img{
+        margin-top: 3rem;
+        width: 360px;
+        height: 420px;
+        border-radius: 3rem;
+    }
+    .climate .box-container .box h3{
+        padding: 0 7.5rem;
+        font-size: 2rem;
+        color: var(--bg-color-2);
+        text-align: center;
+    }
+    .climate .emergency{
+        margin-left: 0;
+        margin-top: 2rem;
+        width: 50rem;
+        border-radius: 20rem 0 0 20rem;
+        padding: 2rem 2rem 2rem 2rem;
+    }
+    .mission{
+        padding: 0 4rem;
+    }
+    .mission .statement{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mission .statement h2{
+        text-align: center;
+        padding: 0 10rem;
+    }
+    .satisfaction .box-container .satisfaction-portion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 36rem;
+        height: 75rem;
+        border-radius: 30rem;
+    }  
+    .satisfaction .box-container .satisfaction-portion .box h3,
+    .satisfaction .box-container .satisfaction-portion .box p{
+        text-align: center;
+    }
+    .satisfaction .box-container .satisfaction-portion .box .satisfaction-img{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin-left: 10rem;
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+    .core .values{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .corporate .vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .core .values .professionalism .div-image img{
+        width: 50rem;
+        height: 23rem;
+        border-radius: 3rem;
+    }
+    .corporate{
+        background-size: 100% 200%;
+    }
+    .mechanical{
+        background-size: auto;
+        padding: 7rem 0 30rem 0;
+    }
+    .mechanical .vision h3{
+        text-align: center;
+    }
+    .mechanical .vision p{
+        text-align: center;
+    }
+    .mechanical .vision{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .vision .div-vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    } 
+    .commercial{
+        padding: 0 2rem 0 2rem;
+    } 
+    .commercial .box-container{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 1.5rem;
+    }
+    .mechanical{
+        background-size: auto;
+        padding: 7rem 0 0rem 0;
+    }
+    .mechanical .vision h3{
+        margin-top: 7rem;
+        text-align: center;
+    }
+    .mechanical .vision p{
+        text-align: center;
+    }
+    .mechanical .vision{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .vision .div-vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .emergency{
+        margin-left: 0;
+    }
+    .mechanical .vision .left img{
+        width: 100%;
+        rotate: 0deg;
+        padding-right: 0rem;
+        padding-bottom: 0;
+    }
+    #newsletter {
+        margin-top: 5rem;
+        padding: 2rem 3rem 0 3rem;
+        background-position: 30% 40%; 
+        min-height: 10rem;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 1rem 2rem 1rem 2rem;        
+    }
+    .hero,
+    .review,
+    .review .review-portion,
+    .partners,
+    .mission,
+    .satisfaction,
+    .core,
+    .corporate,
+    .faq,
+    .commercial,
+    .mechanical,
+    .climate,
+    .professionalism,
+    .news{        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+    .hero{
+        background-image: url("about/hero-mobile.png");
+        align-items: center;
+        height: 110vh;
+        width: 100vw;
+        position: relative;
+        padding: 0 80px;
+    } 
+    .hero h1{
+        margin-top: 0;
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+        padding-right: 0;
+    }
+    .hero p{
+        text-align: center;
+        padding-right: 0;
+    }
+    .header .emergency a::before{
+        content: " ";
+    }   
+    .header .emergency{
+        max-width: none;
+        background: none;
+    }    
+    .theme-btn p::before{
+        content: " ";
+    }
+    .theme-btn{
+        max-width: none;
+        background: none;
+    }
+    .moon{
+        display: none;
+    }
+    .header .logo{
+        margin-top: 5rem;
+        background-size: 84%;
+    }
+    .review .review-portion{
+        font-size: 2.7rem;
+    }
+    .review .box-container .box{
+        max-width: 45rem;
+    }        
+    .partners .partner-logos img{
+        width: 81px;
+        height: 71px;
+    }
+    .climate .box-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .climate .box-container .box{
+        width: 100%;
+        position: relative;
+    }    
+    .climate .box-container .box img{
+        margin-top: 3rem;
+        width: 360px;
+        height: 420px;
+        border-radius: 3rem;
+    }
+    .climate .box-container .box h3{
+        padding: 0 7.5rem;
+        font-size: 2rem;
+        color: var(--bg-color-2);
+        text-align: center;
+    }
+    .climate .emergency{
+        margin-left: 0;
+        margin-top: 2rem;
+        width: 50rem;
+        border-radius: 20rem 0 0 20rem;
+        padding: 2rem 2rem 2rem 2rem;
+    }
+    .mission{
+        padding: 0 4rem;
+    }
+    .mission .statement{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mission .statement h2{
+        text-align: center;
+        padding: 0 10rem;
+    }
+    .satisfaction .box-container .satisfaction-portion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 36rem;
+        height: 75rem;
+        border-radius: 30rem;
+    }  
+    .satisfaction .box-container .satisfaction-portion .box h3,
+    .satisfaction .box-container .satisfaction-portion .box p{
+        text-align: center;
+    }
+    .satisfaction .box-container .satisfaction-portion .box .satisfaction-img{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin-left: 10rem;
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+    .core .values{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .corporate .vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .core .values .professionalism .div-image img{
+        width: 50rem;
+        height: 23rem;
+        border-radius: 3rem;
+    }
+    .corporate{
+        background-size: 100% 200%;
+    }
+    .mechanical{
+        background-size: auto;
+        padding: 7rem 0 30rem 0;
+    }
+    .mechanical .vision h3{
+        text-align: center;
+    }
+    .mechanical .vision p{
+        text-align: center;
+    }
+    .mechanical .vision{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .vision .div-vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    } 
+    .commercial{
+        padding: 0 2rem 0 2rem;
+    } 
+    .commercial .box-container{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 1.5rem;
+    }
+    .mechanical{
+        background-size: auto;
+        padding: 7rem 0 0rem 0;
+    }
+    .mechanical .vision h3{
+        margin-top: 7rem;
+        text-align: center;
+    }
+    .mechanical .vision p{
+        text-align: center;
+    }
+    .mechanical .vision{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .vision .div-vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .emergency{
+        margin-left: 0;
+    }
+    .mechanical .vision .left img{
+        width: 100%;
+        rotate: 0deg;
+        padding-right: 0rem;
+        padding-bottom: 0;
+    }
+    #newsletter {
+        margin-top: 5rem;
+        padding: 2rem 3rem 0 3rem;
+        background-position: 30% 40%; 
+        min-height: 10rem;
+    }
+}

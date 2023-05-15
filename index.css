@@ -1,0 +1,2401 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nunito:wght@300&family=Poppins:wght@400;700&family=Raleway:wght@300;900&family=Roboto&display=swap');
+
+
+:root{
+    --orange: #ffaf37;
+    --text-color-1: #ffffff;
+    --text-color-2: #272727;
+    --text-color-3: #ffffff;
+    --bg-color-1: #b52022;
+    --bg-color-2: #000000; 
+    --bg-color-3: #f8f8f8;
+    --bg-color-6: #ffffff;
+    --bg-color-4: rgb(72, 72, 72);
+    --bg-color-5: #b52022;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
+    --hero-image: url("index/AdobeStock_280116234\(2\).jpg");
+    --hero-mobile: url("index/hero-mobile.png");
+    --telephone-image: url("index/telephone.png");
+    --logo-image: url("index/logo-white.png");
+    --climate-image: linear-gradient(to right, rgb(228, 228, 228), rgba(228,228,228,.85), rgb(255, 255, 255)), url("index/control_solutions.jpg");
+    --faq-plus: url("index/plus.png");
+    --faq-minus: url("index/minus.png");
+    --tele-icon: url("index/calgary-tele.png");
+    --data-icon: url("index/calgary-data.png");
+    --apart-icon: url("index/calgary-apart.png");
+    --shop-icon: url("index/calgary-2shop.png");
+    --comp-icon: url("index/calgary-comp.png");
+    --prop-icon: url("index/calgary-prop.png");
+    --avia-icon: url("index/calgary-avia.png");
+    --proc-icon: url("index/calgary-proc.png");
+    --security-image: url("index/safe-secu.png");
+    
+}
+body.active{
+    --text-color-1: #000000;
+    --text-color-2: #ffffff;
+    --text-color-3: #ffffff;
+    --bg-color-2: #f8f8f8;
+    --bg-color-3: #272727;
+    --bg-color-6: #b5b5b5;
+    --bg-color-5: #ffffff;
+    --box-shadow: 0 .5rem 1.5rem rgba(104, 104, 104, 0.2);
+    --hero-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)), url("index/Air compressor.jpg");
+    --hero-mobile: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)), url("index/Air compressor.jpg");
+    --logo-image: url("index/logo-black.png");
+    --climate-image: linear-gradient(to right, rgb(148, 148, 148), rgba(148,148,148,.85), rgb(150, 150, 150)), url("index/control_solutions.jpg");
+    --faq-minus: url("index/plus.png");
+    --faq-plus: url("index/minus.png");
+    --tele-icon: url("index/D-calgary-tele.png");
+    --data-icon: url("index/D-calgary-data.png");
+    --apart-icon: url("index/D-calgary-apart.png");
+    --shop-icon: url("index/D-calgary-shop.png");
+    --comp-icon: url("index/D-calgary-comp.png");
+    --prop-icon: url("index/D-calgary-prop.png");
+    --avia-icon: url("index/D-calgary-avia.png");
+    --proc-icon: url("index/D-calgary-proc.png");
+    --security-image: url("index/safe-secu-D.png");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-family: "Roboto";
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--orange);
+    border-radius: 5rem;
+}
+
+body{
+    background-color: var(--text-color-1);
+}
+
+section{
+    padding: 6rem 15rem 6rem 15rem;
+}
+
+.image.black{
+    background-color: var(--bg-color-4);
+    width: 4rem;
+    height: 4rem;
+    line-height: 3.5rem;
+    border-radius: 50%;
+    padding: .75rem .75rem;
+}
+
+.image.white{
+    background-color: #e95052;
+    width: 4rem;
+    height: 4rem;
+    line-height: 3.5rem;
+    border-radius: 50%;
+    padding: .75rem .75rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 7%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero{
+    background-image: var(--hero-image);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position-x: right; 
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero h1{
+    margin-top: 5rem;
+    color: var(--bg-color-2);
+    font-size: 4.5rem;
+    padding-right: 50rem;
+}
+
+.hero h1 span{
+    border-bottom: .3rem solid var(--bg-color-1);
+}
+
+.hero p{
+    margin-top: 2rem;
+    color: var(--bg-color-2);
+    font-size: 2rem;
+    padding-right: 50rem;
+}
+
+.hero p span{
+    text-transform: uppercase;
+    color: var(--bg-color-1);
+    font-weight: bold;
+}
+
+.call{
+    width: 23rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.call a{
+    color: #ffffff;
+}
+
+.call img{
+    width: 25px;
+    height: 25px;
+}
+
+.call .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.learn{
+    max-width: 17.5rem;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.learn a{
+    color: var(--bg-color-5);
+}
+
+.learn .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-5);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.header .logo {
+    background-image: var(--logo-image);
+    width: 172px;
+    height: 74px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .icons #menu-btn{
+    height: 5.5rem;
+    width: 5.5rem;
+    line-height: 5.5rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin-left: .5rem;
+    background: var(--bg-color-1);
+    color: var(--text-color-1);
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons #menu-btn:hover{
+    color: var(--text-color-2);
+    background: var(--orange);
+}
+
+.theme-btn{
+    width: 17rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-3);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.theme-btn p::before{
+    content: "LIGHT MODE";
+    color: var(--text-color-2);
+    font-size: 1.5rem;
+}
+
+.theme-btn img{
+    width: 20px;
+    height: 20px;
+}
+
+.theme-btn img:hover{
+    transform: scale(1.2);
+}
+
+.header .navbar{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: var(--bg-color-1);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 25rem;
+    transform: scale(0);
+    transform-origin: top right;
+}
+
+.header .navbar.active{
+    transform: scale(1);
+}
+
+.header .navbar a{
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-color-3);
+    border-radius: .5rem;
+}
+
+.header .navbar a:hover{
+    color: var(--orange);
+    background: var(--bg-color-2);
+    padding-left: 2rem;
+}
+
+.header .emergency{
+    max-width: 37rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .8rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text-color-2);
+    background: var(--text-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.header .emergency a::before{
+    content: "CALL US 24/7 not only in Emergency (403) 226-6066";
+    color: var(--bg-color-2);
+}
+
+.header .emergency img{
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+.header .emergency .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.review .review-portion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review h1{
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--bg-color-2);
+}
+
+.review .review-portion .arrows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: .75rem;
+}
+
+.review .review-portion .arrows .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-3);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+
+}
+
+.review .review-portion .arrows .fa-solid:hover{
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+}
+
+.review .box-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .box-container .box{
+    background: var(--bg-color-3);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    padding: 2rem;
+}
+
+.review .box-container .box i{
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--orange);
+    background: var(--text-color-1);
+    border-radius: 50%;
+    margin-bottom: .5rem;
+}
+
+.review .box-container .box h3{
+    color: var(--bg-color-2);
+    font-size: 2.3rem;
+    padding: .7rem 0;
+}
+
+.review .box-container .box h4{
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    font-weight: 420;
+    padding: .7rem 0;
+    border-bottom: .1rem solid #b52022;
+}
+
+.review .box-container .box p{
+    margin-top: 3rem;
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.partners .partner-logos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners .partner-logos img{
+    width: 20%;
+}
+
+.climate{
+    background: var(--climate-image);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 10rem;    
+}
+
+.climate .box-container{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    gap: 1.5rem;
+}
+
+.climate .box-container .box{
+    position: relative;
+    padding: 5rem 5rem 0 5rem;
+}
+
+.climate .box-container .box.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.climate .box-container .box .back{
+    background: var(--bg-color-3);
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    border: .75rem solid var(--bg-color-6);
+    position: absolute;
+}
+
+.climate .box-container .box img{
+    width: 450px;
+    height: 270px;
+    border-radius: 20rem;
+    position: relative;
+}
+
+.climate .box-container .box h3{
+    font-size: 3.4rem;
+    color: black;
+}
+
+.climate .box-container .box p{
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: black;
+}
+
+.climate .box-container .box .emergency{
+    max-width: 17.5rem;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.climate .box-container .box .emergency a{
+    color: #ffffff;
+}
+
+.climate .box-container .box .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-3);
+    color: var(--bg-color-5);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.services .services-portion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 22rem;
+}
+
+.services h1{
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--bg-color-2);
+}
+
+.services .box-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.services .box-container .box{
+    border-radius: 2rem;
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .box-container .box:hover{
+    background: var(--bg-color-3);
+    box-shadow: var(--box-shadow);
+}
+
+.services .box-container .box img{
+    background: var(--bg-color-6);
+    box-shadow: var(--box-shadow);
+    line-height: 10rem;
+    border-radius: 50%;    
+    width: 7.5rem;
+    height: 7.5rem;
+    padding: .75rem .75rem;
+}
+
+.services .box-container .box h3{
+    color: var(--bg-color-2);
+    font-size: 2.3rem;
+    padding: .7rem 0;
+    text-align: center;
+}
+
+.services .box-container .box p{
+    margin-top: 1.5rem;
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.satisfaction .box-container{
+    border: .1rem solid var(--bg-color-1);
+    border-radius: 10rem 10rem 4rem 4rem;
+    background: var(--bg-color-3);
+}
+
+.satisfaction .box-container .satisfaction-portion{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 40% 60%;
+    gap: 2rem;
+    background: var(--bg-color-1);
+    border-radius: 10rem;
+    padding: 1.5rem 3rem;
+    height: 20rem;
+}
+
+.satisfaction .box-container .satisfaction-portion .box img{
+    width: 17rem;
+    height: 17rem;
+}
+
+.satisfaction .box-container .satisfaction-portion .box .satisfaction-img{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.satisfaction .box-container .satisfaction-portion .box .satisfaction-img img{
+    width: 40%;
+    height: 40%;
+}
+
+.satisfaction .box-container .satisfaction-portion .box h3{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: var(--text-color-3);
+}
+
+.satisfaction .box-container .satisfaction-portion .box p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--text-color-3);
+}
+
+.satisfaction-para-one p{
+    padding: 2rem 3rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--bg-color-2);
+}
+
+.satisfaction-para-two p:nth-child(1){
+    margin-left: 3rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    font-weight: bold;
+    color: var(--bg-color-2);
+}
+
+.satisfaction-para-two p span{
+    color: var(--bg-color-1);
+}
+
+.satisfaction-para-two p:nth-child(2){
+    margin-left: 3rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: var(--bg-color-2);
+}
+
+.satisfaction-down{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.satisfaction-down .emergency{
+    max-width: 20rem;
+    height: 5rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--text-color-2);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.satisfaction-down .emergency a{
+    color: var(--text-color-1);
+}
+
+.satisfaction-down .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-2);
+    color: var(--text-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.commercial h1{
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--text-color-2);
+}
+
+.commercial .box-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+}
+
+.commercial .box-container .box{
+    border-radius: 2rem;
+    position: relative;
+    padding: 2rem;
+    transition: .2s ease-in;
+}
+
+.commercial .box-container .box:hover{
+    background: var(--bg-color-3);
+    box-shadow: var(--box-shadow);
+    transform: scale(1.1);
+}
+
+.commercial .box-container .box h3{
+    margin-top: 2rem;
+    color: var(--bg-color-2);
+    font-size: 2rem;
+}
+
+.commercial .box-container .box p{
+    margin-top: 3rem;
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.commercial .box-container .box img{
+    width: 6.5rem;
+    height: 6.5rem;
+    padding: .75rem .75rem;
+    background: var(--bg-color-6);
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
+}
+
+.commercial .box-container .box:hover img{
+    background: var(--bg-color-1);
+}
+
+.commercial .box-container .box .emergency{
+    max-width: 17.5rem;
+    height: 5rem;
+    display: flex;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.commercial .box-container .box .emergency a{
+    color: var(--bg-color-5);
+}
+
+.commercial .box-container .box .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-3);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.repair{
+    padding: 0;
+}
+
+.repair .main-div{
+    margin-top: 5rem;
+    background-image: url("index/AdobeStock_124800801.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.repair h1{
+    padding: 0 3rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.repair h1 span{
+    border-bottom: .2rem solid var(--bg-color-1);
+}
+
+.repair p{
+    padding: 0 20rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    text-align: center;
+    color: #ffffff;
+}
+
+.repair .emergency{
+    max-width: 70rem;
+    margin-top: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: .7rem 1rem;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: var(--text-color-1);
+    background: var(--bg-color-3);
+    border: .1rem solid var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.repair .emergency a{
+    color: var(--bg-color-2);
+}
+
+.repair .emergency img{
+    width: 25px;
+    height: 25px;
+}
+
+.repair .emergency .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--bg-color-1);
+}
+
+.calgary h1{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--bg-color-2);
+}
+
+.calgary .providing{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.one,
+.two{
+    background-color: var(--bg-color-3);
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.one:hover,
+.two:hover{
+    background-color: var(--bg-color-1);
+}
+
+.one h3,
+.two h3{
+    font-size: 1.5rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    color: var(--bg-color-2);
+}
+
+.one h3:hover,
+.two h3:hover{
+    font-size: 1.5rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    color: #ffffff;
+}
+
+.providing-one,
+.providing-three{
+    margin-top: 17rem;
+}
+
+.two{
+    margin-top: 2rem;
+}
+
+.providing-one .one .image{
+    background-image: var(--tele-icon);
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+}
+
+.providing-one .two .image{
+    background-image: var(--apart-icon);
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+}
+
+.providing-two .one .image{
+    background-image: var(--data-icon);
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+}
+
+.providing-two .two .image{
+    background-image: var(--shop-icon);
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+}
+
+.providing-three .one .image{
+    background-image: var(--comp-icon);
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+}
+
+.providing-three .two .image{
+    background-image: var(--avia-icon);
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+}
+
+.providing-four .one .image{
+    background-image: var(--prop-icon);
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+}
+
+.providing-four .two .image{
+    background-image: var(--proc-icon);
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+}
+
+.experts .control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.experts .emergency{
+    max-width: 17.5rem;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.experts .emergency a{
+    color: var(--text-color-3);
+}
+
+.experts .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--text-color-3);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.experts .control .para-one,
+.experts .control .para-two,
+.experts .control .para-three{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7rem;
+}
+
+.sub-para h3{
+    font-size: 4rem;
+    color: var(--bg-color-2);
+    margin-top: 2.5rem;
+}
+
+.sub-para p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+    margin-top: 2rem;
+}
+
+.image-one{
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+}
+
+.para-one .image-one img:nth-child(1){
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    background-color: var(--bg-color-1);
+    border-radius: 50%;
+    border: .3rem solid #ffffff;
+}
+
+.para-two .image-one img:nth-child(1){
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    margin-left: 33rem;
+    margin-top: 1rem;
+    background-color: var(--bg-color-1);
+    border-radius: 50%;
+    border: .3rem solid #ffffff;
+}
+
+.para-three .image-one img:nth-child(1){
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    margin-top: 1rem;
+    background-color: var(--bg-color-1);
+    border-radius: 50%;
+    border: .3rem solid #ffffff;
+}
+
+.image-one img:nth-child(2){ 
+    width: 40rem;
+    height: 40rem;  
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.security h1{
+    margin-top: 2rem;
+    font-size: 4.5rem;
+    color: var(--bg-color-2);
+    text-align: center;
+}
+
+.security .security-para{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.security .security-para .para-one h3,
+.security .security-para .para-three h3{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--bg-color-2);
+}
+
+.security .security-para .para-one p,
+.security .security-para .para-three p{
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+}
+
+.security .security-para .para-one h4,
+.security .security-para .para-three h4{
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+}
+
+.security .security-para .para-one ul li,
+.security .security-para .para-three ul li{
+    margin-top: 1.5rem;
+    margin-left: 1.25rem;
+    font-size: 1.3rem;
+    color: var(--bg-color-2);
+    list-style: circle inside url("index/circle.png");
+}
+
+.security .para-two{
+    background-image: var(--security-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 33rem;
+    height: 45rem;   
+}
+
+.heating .residential{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.heating .residential .para-one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+
+.heating .emergency{
+    max-width: 17.5rem;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.heating .emergency a{
+    color: var(--text-color-3);
+}
+
+.heating .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--text-color-3);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.residential .residential-logos{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.residential .residential-logos img{
+    width: 17%;
+}
+
+.reviews .reviews-portion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22rem;
+}
+
+.reviews .reviews-portion .google{ 
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.reviews .reviews-portion .google .stars{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+}
+
+.reviews .reviews-portion .google .stars i{ 
+    color: var(--orange);
+    font-size: 1.75rem;
+}
+
+.reviews-portion h1{
+    font-size: 4.5rem;
+    color: var(--bg-color-2);
+}
+
+.reviews-portion p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--bg-color-2);
+}
+
+.reviews .box-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.reviews .box-container .box{
+    background: var(--bg-color-3);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    padding: 2rem;
+}
+
+.reviews .box-container .box i{
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--orange);
+    background: var(--text-color-1);
+    border-radius: 50%;
+    margin-bottom: .5rem;
+}
+
+.reviews .box-container .box h3{
+    color: var(--bg-color-2);
+    font-size: 2rem;
+}
+
+.reviews .box-container .box h4{
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.reviews .box-container .box p{
+    margin-top: 2rem;
+    color: var(--bg-color-2);
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.reviews-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.reviews-header .user{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews-header img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.reviews .emergency{
+    max-width: 20rem;
+    height: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-1);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.reviews .emergency a{
+    color: var(--text-color-3);
+}
+
+.reviews .emergency .fa-solid{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;    
+    background: var(--bg-color-3);
+    color: var(--bg-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.mechanical-up{
+    padding: 12rem 0 0 12rem;
+    background-image: url("index/bg-red.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.mechanical-up .vision{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.mechanical-up .vision img{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;    
+}
+
+.mechanical-up .vision h3{
+    font-size: 2.5rem;
+    color: var(--text-color-3);
+    text-align: center;
+}
+
+.mechanical-up .vision p{
+    margin-top: 3.5rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--text-color-3);
+}
+
+.mechanical-up .vision .div-vision{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.mechanical-up .emergency{
+    width: 50rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color-1);
+    background: #ffffff;
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.mechanical-up .emergency a{
+    color: #000000;
+}
+
+.mechanical-up .emergency .image{
+    width: 4rem;
+    height: 4rem;
+    padding: .75rem .75rem;
+    border-radius: 50%;
+    background: var(--bg-color-4);
+}
+
+.mechanical-up .emergency img{
+    width: 25px;
+    height: 25px;
+}
+
+.mechanical-up .emergency .btn span{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--bg-color-1);
+}
+
+.faq{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.faq h2{
+    color: var(--bg-color-2);
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.faq h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 1.2rem;
+    width: 6.7rem;
+    height: .2rem;
+}
+
+.accordion{
+    width: 100%;
+    padding: 0 .5rem;
+    border-bottom: .1rem solid var(--bg-color-4);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    align-items: center;
+}
+
+.accordion h3{
+    font-size: 1.7rem;
+    color: var(--bg-color-2);
+}
+
+.accordion h3:hover{
+    color: var(--bg-color-1);
+}
+
+.accordion .number{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.accordion .icon{
+    width: 3rem;
+    height: 3rem;
+    background: var(--faq-plus);
+    border-radius: 50%;
+    float: left;
+    transition: all .5s ease-in;
+}
+
+.accordion h5{
+    font-size: 2rem;
+    margin: 0;
+    padding: .3rem 0 0 0;
+    font-weight: normal;
+    color: var(--bg-color-2);
+}
+
+.accordion p{
+    color: var(--bg-color-2);
+}
+
+.active .icon {
+    background: var(--faq-minus);
+}
+
+.panel{
+    padding: 0 1.5rem;
+    border-left: .1rem solid var(--bg-color-2);
+    margin-left: 2.5rem;
+    font-size: 1.4rem;
+    text-align: justify;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s ease-in;
+}
+
+.panel p{
+    color: var(--bg-color-2);
+}
+
+.mechanical{
+    background-image: url("index/bg-red.png");
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+    padding-left: 0;
+}
+
+.mechanical .vision{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.mechanical .vision .left img{
+    width: 40rem;
+    height: 40rem;
+    padding-right: 10rem;
+    padding-bottom: 10.25rem;
+    rotate: 5deg;
+}
+
+.mechanical .vision h3{
+    font-size: 2.5rem;
+    color: var(--text-color-3);
+    text-align: center;
+}
+
+.mechanical .emergency{
+    max-width: 25rem;
+    margin-top: 5rem;
+    margin-left: 12rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color-1);
+    background: var(--bg-color-2);
+    border-radius: 20rem;
+    cursor: pointer;
+}
+
+.mechanical .emergency a{
+    color: var(--text-color-1);
+}
+
+.mechanical .emergency .image{
+    width: 4rem;
+    height: 4rem;
+    padding: .75rem .75rem;
+    border-radius: 50%;
+    background: var(--bg-color-4);
+}
+
+.mechanical .emergency img{
+    width: 25px;
+    height: 25px;
+}
+
+.mechanical .emergency .btn span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+#newsletter{
+    padding: 0 20rem 0 20rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 20% 30%; 
+    background-color: var(--bg-color-3);
+    width: 100%;
+    min-height: 10rem;
+}
+
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bg-color-2);
+}
+
+#newsletter .form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 5rem;
+}
+
+#newsletter .emergency{
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#newsletter .emergency .fa-solid{
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;    
+    background: var(--bg-color-1);
+    color: var(--text-color-1);
+    text-align: center;
+    border-radius: 50%;
+}
+
+footer{
+    padding: 12rem 12rem 0 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .col.install p:hover{
+    color: var(--bg-color-1);
+}
+
+footer .col span{
+    border-bottom: .2rem solid var(--bg-color-1);
+}
+
+footer .logo{
+    background-image: var(--logo-image);
+    width: 172px;
+    height: 74px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: var(--bg-color-2);
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    color: var(--bg-color-2);
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--bg-color-2);;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+footer .follow i{
+    color: var(--bg-color-2);
+    padding-right: 4px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+footer .follow i{
+    color: var(--bg-color-2);
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: var(--bg-color-1);
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+footer .copyright span{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 0 0 0 0;
+    } 
+}
+@media screen and (max-width: 1024px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+}
+
+@media screen and (max-width: 768px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 1rem 2rem 1rem 2rem;        
+    }
+    .hero,
+    .hero .main-div,
+    .review,
+    .partners,
+    .climate,
+    .services,
+    .satisfaction,
+    .commercial,
+    .repair,
+    .calgary,
+    .experts,
+    .heating,
+    .reviews,
+    .mechanical-up,
+    .mechanical,
+    .news{        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+    .hero{
+        background-image: var(--hero-mobile);
+        height: 100vh;
+        width: 100%;
+        background-size: cover;       
+        padding: 0 9rem;
+    }
+    .hero h1{
+        margin-top: 0;
+        font-size: 3.5rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 0;
+    }
+    .hero p{
+        text-align: center;
+        padding: 0;
+    }
+    .header .emergency a::before{
+        content: " ";
+    }   
+    .header .emergency{
+        max-width: none;
+        background: none;
+    }    
+    .theme-btn p::before{
+        content: " ";
+    }
+    .theme-btn{
+        max-width: none;
+        background: none;
+    }
+    .moon{
+        display: none;
+    }
+    .header .logo{
+        margin-top: 5rem;
+        background-size: 84%;
+    }     
+    .review .review-portion{
+        font-size: 2.7rem;
+    }
+    .review .box-container .box{
+        max-width: 45rem;
+    }        
+    .partners .partner-logos img{
+        width: 81px;
+        height: 71px;
+    }
+    .climate{
+        height: 130vh; 
+    }
+    .climate .box-container .box img{
+        margin-top: 5rem;
+        width: 310px;
+        height: 162px;
+    }
+    .climate .box-container{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        padding: 0 2rem 15rem 2rem;
+    }   
+    .climate .box-container .box.right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }  
+    .climate h3,
+    .climate p{
+        text-align: center;
+    } 
+    .services{
+        margin-top: 5rem;
+    }
+    .services h1{
+        font-size: 3rem;
+    }
+    .services .box-container .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .services .box-container .box .installation h3,
+    .services .box-container .box .installation p{
+        text-align: left;
+    }
+    .satisfaction .box-container{
+        width: 25rem;
+        height: 130rem;
+    }
+    .satisfaction .box-container .satisfaction-portion{
+        width: 25rem;
+        height: 82rem;
+        display: flex;
+        flex-basis: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }       
+    .satisfaction .box-container .satisfaction-portion .box .satisfaction-img{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+    .satisfaction .box-container .satisfaction-portion .box .satisfaction-img img{
+        width: 90%;
+        height: 90%;
+        margin-left: 12rem;
+    }
+    .satisfaction-down{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }   
+    .commercial h1{
+        margin-top: 2rem;
+        font-size: 3rem;
+    }
+    .repair{
+        height: 100vh;
+        padding: 10rem 0;
+    }
+    .repair p{
+        padding: 0 2rem;
+    }    
+    .repair .emergency{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 50rem;
+        width: 50rem;
+    }
+    .calgary h1{
+        font-size: 2.4rem;
+    }
+    .calgary .providing{
+        display: flex;
+        flex-direction: column;
+    }
+    .calgary .providing-one,
+    .calgary .providing-two,
+    .calgary .providing-three,
+    .calgary .providing-four{
+        display: flex;
+        flex-direction: row;
+        gap: 1.4rem;
+    }
+    .providing-one,
+    .providing-two,
+    .providing-three,
+    .providing-four,
+    .one,
+    .two{
+        margin-top: 0;
+    }
+    .experts .control .para-one,
+    .experts .control .para-three{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .experts .control .para-two{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub-para{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub-para p{
+        text-align: center;
+    }  
+    .security h1{
+        font-size: 3rem;
+        text-align: left; 
+    }  
+    .security .security-para{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .security .security-para .para-three h3{
+        margin-top: 2rem;
+    }
+    .residential .residential-logos img{
+        width: 81px;
+        height: 71px;
+    }
+    .heating .residential{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
+    .heating .residential .para-one{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
+    .reviews .reviews-portion{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }    
+    .reviews .reviews-portion .google{ 
+        justify-content: center;
+    }    
+    .mechanical-up{
+        background-size: auto;
+        padding: 7rem 0 0 0;
+    }
+    .mechanical-up .vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }  
+    .mechanical-up .vision h3{
+        margin-top: 5rem;
+        text-align: center;
+    }
+    .mechanical-up .vision p{
+        text-align: center;
+    }
+    .mechanical-up .vision{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }    
+    .mechanical-up .emergency{
+        width: 35rem;
+    }
+    .mechanical{
+        background-size: auto;
+        padding: 7rem 0 0rem 0;
+    }
+    .mechanical .vision h3{
+        text-align: center;
+    }
+    .mechanical .vision p{
+        text-align: center;
+    }
+    .mechanical .vision{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .vision .div-vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .emergency{
+        margin-left: 0;
+    }
+    .mechanical .vision .left img{
+        width: 100%;
+        rotate: 0deg;
+        padding-right: 0rem;
+        padding-bottom: 0;
+    }
+    #newsletter {
+        margin-top: 5rem;
+        padding: 2rem 3rem 0 3rem;
+        background-position: 30% 40%; 
+        min-height: 10rem;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 1rem 2rem 1rem 2rem;        
+    }
+    .hero,
+    .hero .main-div,
+    .review,
+    .partners,
+    .climate,
+    .services,
+    .satisfaction,
+    .commercial,
+    .repair,
+    .calgary,
+    .experts,
+    .heating,
+    .reviews,
+    .mechanical-up,
+    .mechanical,
+    .news{        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+    .hero{
+        background-image: var(--hero-mobile);
+        height: 100vh;
+        width: 100%;
+        background-size: cover;       
+        padding: 0 9rem;
+    }
+    .hero h1{
+        margin-top: 0;
+        font-size: 3.5rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 0;
+    }
+    .hero p{
+        text-align: center;
+        padding: 0;
+    }
+    .header .emergency a::before{
+        content: " ";
+    }   
+    .header .emergency{
+        max-width: none;
+        background: none;
+    }    
+    .theme-btn p::before{
+        content: " ";
+    }
+    .theme-btn{
+        max-width: none;
+        background: none;
+    }
+    .moon{
+        display: none;
+    }
+    .header .logo{
+        margin-top: 5rem;
+        background-size: 84%;
+    }     
+    .review .review-portion{
+        font-size: 2.7rem;
+    }
+    .review .box-container .box{
+        max-width: 45rem;
+    }        
+    .partners .partner-logos img{
+        width: 81px;
+        height: 71px;
+    }
+    .climate{
+        height: 130vh; 
+    }
+    .climate .box-container .box img{
+        margin-top: 5rem;
+        width: 310px;
+        height: 162px;
+    }
+    .climate .box-container{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        padding: 0 2rem 15rem 2rem;
+    }   
+    .climate .box-container .box.right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }  
+    .climate h3,
+    .climate p{
+        text-align: center;
+    } 
+    .services{
+        margin-top: 5rem;
+    }
+    .services h1{
+        font-size: 3rem;
+    }
+    .services .box-container .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .services .box-container .box .installation h3,
+    .services .box-container .box .installation p{
+        text-align: left;
+    }
+    .satisfaction .box-container .satisfaction-portion{
+        display: flex;
+        flex-direction: column;
+        width: 25rem;
+        height: 75rem;
+    }    
+    .satisfaction .box-container .satisfaction-portion .box .satisfaction-img{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin-left: 0;
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+    .satisfaction .box-container .satisfaction-portion .box .satisfaction-img img{
+        width: 75%;
+        height: 75%;
+    }
+    .commercial h1{
+        margin-top: 2rem;
+        font-size: 3rem;
+    }
+    .repair{
+        height: 100vh;
+        padding: 10rem 0;
+    }
+    .repair p{
+        padding: 0 2rem;
+    }    
+    .repair .emergency{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 50rem;
+        width: 50rem;
+    }
+    .calgary h1{
+        font-size: 2.4rem;
+    }
+    .calgary .providing{
+        display: flex;
+        flex-direction: column;
+    }
+    .calgary .providing-one,
+    .calgary .providing-two,
+    .calgary .providing-three,
+    .calgary .providing-four{
+        display: flex;
+        flex-direction: row;
+        gap: 1.4rem;
+    }
+    .providing-one,
+    .providing-two,
+    .providing-three,
+    .providing-four,
+    .one,
+    .two{
+        margin-top: 0;
+    }
+    .experts .control .para-one,
+    .experts .control .para-three{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .experts .control .para-two{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub-para{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub-para p{
+        text-align: center;
+    }  
+    .security h1{
+        font-size: 3rem;
+        text-align: left; 
+    }  
+    .security .security-para{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .security .security-para .para-three h3{
+        margin-top: 2rem;
+    }
+    .residential .residential-logos img{
+        width: 81px;
+        height: 71px;
+    }
+    .heating .residential{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
+    .heating .residential .para-one{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
+    .reviews .reviews-portion{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }    
+    .reviews .reviews-portion .google{ 
+        justify-content: center;
+    }    
+    .mechanical-up{
+        background-size: auto;
+        padding: 7rem 0 0 0;
+    }
+    .mechanical-up .vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }  
+    .mechanical-up .vision h3{
+        margin-top: 5rem;
+        text-align: center;
+    }
+    .mechanical-up .vision p{
+        text-align: center;
+    }
+    .mechanical-up .vision{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }    
+    .mechanical-up .emergency{
+        width: 35rem;
+    }
+    .mechanical{
+        background-size: auto;
+        padding: 7rem 0 0rem 0;
+    }
+    .mechanical .vision h3{
+        margin: 5rem;
+        text-align: center;
+    }
+    .mechanical .vision p{
+        text-align: center;
+    }
+    .mechanical .vision{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .vision .div-vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }  
+    .mechanical .emergency{
+        margin-left: 0;
+    }
+    .mechanical .vision .left img{
+        width: 100%;
+        rotate: 0deg;
+        padding-right: 0rem;
+        padding-bottom: 0;
+    }
+    #newsletter {
+        margin-top: 5rem;
+        padding: 2rem 3rem 0 3rem;
+        background-position: 30% 40%; 
+        min-height: 10rem;
+    }
+}
